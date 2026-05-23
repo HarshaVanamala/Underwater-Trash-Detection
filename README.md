@@ -42,7 +42,7 @@ This project builds a real-time underwater object detection pipeline capable of:
 ## 📊 Results
 
 | Metric | Score |
-|---|---|
+|--------|-------|
 | Precision | 0.848 |
 | Recall | 0.735 |
 | mAP@0.5 | 0.802 |
@@ -58,10 +58,10 @@ Sample predictions are available in the `final_predictions/` folder. Evaluation 
 underwater-trash-detection/
 │
 ├── 📁 notebooks/
-│   ├── 01_preprocessing.ipynb       # Dataset cleaning and augmentation
-│   ├── 02_training.ipynb            # YOLOv8s model training
-│   ├── 03_evaluation.ipynb          # Metrics and evaluation plots
-│   └── 04_inference.ipynb           # Run predictions on new images
+│   ├── 01_data_preprocessing.ipynb       # Dataset cleaning and augmentation
+│   ├── 02_model_training.ipynb            # YOLOv8s model training
+│   ├── 03_model_evaluation.ipynb          # Metrics and evaluation plots
+│   └── 04_inference_demo.ipynb           # Run predictions on new images
 │
 ├── 📁 models/
 │   └── trashcan_base_best.pt        # Trained model weights (download separately)
@@ -96,7 +96,7 @@ C:\Users\harsha\Desktop\Underwater-Trash-Detection\processed_dataset
 **To reproduce the processed dataset:**
 1. Download the raw dataset from the [TrashCan Dataset page](https://conservancy.umn.edu/handle/11299/214865)
 2. Place the contents in a `raw_data/` folder at the project root
-3. Run `notebooks/01_preprocessing.ipynb` to generate the processed version
+3. Run `notebooks/01_data_preprocessing.ipynb` to generate the processed version
 
 ### ⚙️ Preprocessing & Augmentation
 
@@ -175,11 +175,11 @@ results = model.predict("test_images_real/", conf=0.25, save=True)
 ### Run the full pipeline via notebooks
 
 | Notebook | Purpose |
-|---|---|
-| `01_preprocessing.ipynb` | Clean and prepare the dataset |
-| `02_training.ipynb` | Train YOLOv8s from scratch |
-| `03_evaluation.ipynb` | Generate metrics and evaluation plots |
-| `04_inference.ipynb` | Run predictions on new images |
+|----------|---------|
+| `01_data_preprocessing.ipynb` | Clean and prepare the dataset |
+| `02_model_training.ipynb` | Train YOLOv8s from scratch |
+| `03_model_evaluation.ipynb` | Generate metrics and evaluation plots |
+| `04_inferencedemo_.ipynb` | Run predictions on new images |
 
 ---
 
